@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admin Login | Joshika S Portfolio</title>
+  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <div class="login-wrapper">
+    <div class="login-card">
+
+      <a href="../index.html" class="nav-logo" style="display:inline-block; margin-bottom: 1.5rem;">
+        ← Back to Portfolio
+      </a>
+
+      <h1 class="login-title">Admin Login</h1>
+      <p class="login-subtitle">Sign in to manage your portfolio content.</p>
+
+      <div
+        id="login-error"
+        class="form-feedback form-feedback--error"
+        role="alert"
+        aria-live="assertive"
+        hidden
+      ></div>
+
+      <form id="login-form" class="contact-form" novalidate aria-label="Admin login form">
+
+        <div class="form-group">
+          <label for="login-email" class="form-label">
+            Email <span aria-hidden="true">*</span>
+          </label>
+          <input
+            type="email"
+            id="login-email"
+            name="email"
+            class="form-input"
+            placeholder="admin@example.com"
+            autocomplete="username"
+            aria-required="true"
+            aria-describedby="login-error"
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="login-password" class="form-label">
+            Password <span aria-hidden="true">*</span>
+          </label>
+          <input
+            type="password"
+            id="login-password"
+            name="password"
+            class="form-input"
+            placeholder="Your password"
+            autocomplete="current-password"
+            aria-required="true"
+            aria-describedby="login-error"
+          />
+        </div>
+
+        <button type="submit" class="btn btn--primary btn--full" id="login-btn">
+          Login
+        </button>
+
+      </form>
+    </div>
+  </div>
+
+  <script src="../js/admin-login.js"></script>
+</body>
+</html>

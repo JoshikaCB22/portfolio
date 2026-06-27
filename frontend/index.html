@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Joshika S | Portfolio</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- ===== HEADER / NAV ===== -->
+  <header class="site-header" role="banner">
+    <nav class="navbar" aria-label="Primary navigation">
+      <a href="#home" class="nav-logo" aria-label="Joshika S — Home">Joshika S</a>
+
+      <button
+        class="hamburger"
+        aria-label="Toggle navigation menu"
+        aria-expanded="false"
+        aria-controls="nav-links"
+        type="button"
+      >
+        <span class="hamburger-bar"></span>
+        <span class="hamburger-bar"></span>
+        <span class="hamburger-bar"></span>
+      </button>
+
+      <ul class="nav-links" id="nav-links" role="list">
+        <li><a href="#home"     class="nav-link">Home</a></li>
+        <li><a href="#projects" class="nav-link">Projects</a></li>
+        <li><a href="#skills"   class="nav-link">Skills</a></li>
+        <li><a href="#contact"  class="nav-link">Contact</a></li>
+        <li><a href="admin/login.html" class="nav-link nav-link--admin">Admin</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main-content">
+
+    <!-- ===== HOME SECTION ===== -->
+    <section id="home" class="section section--hero" aria-label="Introduction">
+      <div class="container hero-container">
+
+        <!-- Profile photo -->
+        <div class="hero-photo-wrapper">
+          <img
+            src="assets/profile.jpg"
+            alt="Profile photo of Joshika S"
+            class="hero-photo"
+            id="profile-photo"
+            onerror="this.style.display='none'; document.getElementById('profile-initials').style.display='flex';"
+          />
+          <div class="hero-initials" id="profile-initials" aria-hidden="true" style="display:none;">JS</div>
+        </div>
+
+        <!-- Hero text -->
+        <div class="hero-text">
+          <h1 class="hero-name">Joshika S</h1>
+          <p class="hero-headline">
+            Aspiring Full Stack Developer&nbsp;| Backend Developer&nbsp;|
+            Spring Boot Developer&nbsp;| AI Enthusiast
+          </p>
+          <p class="hero-bio">
+            I'm a Computer Science and Business Systems undergraduate passionate
+            about Full Stack Development, Backend Engineering, and AI-powered
+            applications. I enjoy building scalable web applications using Java,
+            Spring Boot, Node.js, MySQL, HTML, CSS, and JavaScript, while
+            developing intelligent solutions that solve real-world problems. I
+            have hands-on experience developing REST APIs, backend systems,
+            role-based web applications, and AI-driven platforms through
+            academic projects and internships.
+          </p>
+
+          <!-- Education & Internship -->
+          <div class="hero-meta">
+            <div class="meta-item">
+              <span class="meta-icon" aria-hidden="true">🎓</span>
+              <div>
+                <span class="meta-label">Education</span>
+                <span class="meta-value">
+                  B.Tech – Computer Science and Business Systems,
+                  RMK Engineering College &nbsp;·&nbsp; CGPA: 8.35
+                </span>
+              </div>
+            </div>
+            <div class="meta-item">
+              <span class="meta-icon" aria-hidden="true">💼</span>
+              <div>
+                <span class="meta-label">Internship</span>
+                <span class="meta-value">
+                  Infosys Springboard Virtual Internship – Artificial
+                  Intelligence &amp; Machine Learning
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <!-- CTA buttons -->
+          <div class="hero-actions">
+            <a href="#projects" class="btn btn--primary">View Projects</a>
+            <a href="#contact"  class="btn btn--outline">Contact Me</a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ===== PROJECTS SECTION ===== -->
+    <section id="projects" class="section" aria-label="Projects">
+      <div class="container">
+        <h2 class="section-title">My Projects</h2>
+        <p class="section-subtitle">A selection of work I've built and shipped.</p>
+        <div id="projects-grid" class="projects-grid" aria-live="polite" aria-label="Projects list">
+          <p class="loading-text" id="projects-loading">Loading projects…</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== SKILLS SECTION ===== -->
+    <section id="skills" class="section section--alt" aria-label="Skills and Technologies">
+      <div class="container">
+        <h2 class="section-title">Skills &amp; Technologies</h2>
+        <p class="section-subtitle">Technologies I work with and my proficiency levels.</p>
+        <div id="skills-container" aria-label="Skills list">
+
+          <div class="skills-category">
+            <h3 class="skills-category-title">Programming Languages</h3>
+            <div class="skills-tags">
+              <span class="skill-tag"><span>Java</span><span class="proficiency-badge proficiency-badge--expert">Expert</span></span>
+              <span class="skill-tag"><span>JavaScript</span><span class="proficiency-badge proficiency-badge--intermediate">Intermediate</span></span>
+              <span class="skill-tag"><span>SQL</span><span class="proficiency-badge proficiency-badge--intermediate">Intermediate</span></span>
+            </div>
+          </div>
+
+          <div class="skills-category">
+            <h3 class="skills-category-title">Frontend</h3>
+            <div class="skills-tags">
+              <span class="skill-tag"><span>HTML5</span><span class="proficiency-badge proficiency-badge--expert">Expert</span></span>
+              <span class="skill-tag"><span>CSS3</span><span class="proficiency-badge proficiency-badge--expert">Expert</span></span>
+              <span class="skill-tag"><span>JavaScript</span><span class="proficiency-badge proficiency-badge--intermediate">Intermediate</span></span>
+              <span class="skill-tag"><span>Responsive Web Design</span><span class="proficiency-badge proficiency-badge--intermediate">Intermediate</span></span>
+            </div>
+          </div>
+
+          <div class="skills-category">
+            <h3 class="skills-category-title">Backend</h3>
+            <div class="skills-tags">
+              <span class="skill-tag"><span>Spring Boot</span><span class="proficiency-badge proficiency-badge--expert">Expert</span></span>
+              <span class="skill-tag"><span>Node.js</span><span class="proficiency-badge proficiency-badge--intermediate">Intermediate</span></span>
+              <span class="skill-tag"><span>Express.js</span><span class="proficiency-badge proficiency-badge--intermediate">Intermediate</span></span>
+              <span class="skill-tag"><span>REST API Development</span><span class="proficiency-badge proficiency-badge--expert">Expert</span></span>
+            </div>
+          </div>
+
+          <div class="skills-category">
+            <h3 class="skills-category-title">Database</h3>
+            <div class="skills-tags">
+              <span class="skill-tag"><span>MySQL</span><span class="proficiency-badge proficiency-badge--expert">Expert</span></span>
+            </div>
+          </div>
+
+          <div class="skills-category">
+            <h3 class="skills-category-title">AI &amp; Machine Learning</h3>
+            <div class="skills-tags">
+              <span class="skill-tag"><span>AI Applications</span><span class="proficiency-badge proficiency-badge--intermediate">Intermediate</span></span>
+              <span class="skill-tag"><span>Speech Recognition</span><span class="proficiency-badge proficiency-badge--intermediate">Intermediate</span></span>
+              <span class="skill-tag"><span>Adaptive Learning Systems</span><span class="proficiency-badge proficiency-badge--intermediate">Intermediate</span></span>
+              <span class="skill-tag"><span>Progress Tracking Systems</span><span class="proficiency-badge proficiency-badge--intermediate">Intermediate</span></span>
+            </div>
+          </div>
+
+          <div class="skills-category">
+            <h3 class="skills-category-title">Tools &amp; Platforms</h3>
+            <div class="skills-tags">
+              <span class="skill-tag"><span>Git</span><span class="proficiency-badge proficiency-badge--expert">Expert</span></span>
+              <span class="skill-tag"><span>GitHub</span><span class="proficiency-badge proficiency-badge--expert">Expert</span></span>
+              <span class="skill-tag"><span>VS Code</span><span class="proficiency-badge proficiency-badge--expert">Expert</span></span>
+              <span class="skill-tag"><span>IntelliJ IDEA</span><span class="proficiency-badge proficiency-badge--expert">Expert</span></span>
+            </div>
+          </div>
+
+          <div class="skills-category">
+            <h3 class="skills-category-title">Core Computer Science</h3>
+            <div class="skills-tags">
+              <span class="skill-tag"><span>Object-Oriented Programming</span><span class="proficiency-badge proficiency-badge--expert">Expert</span></span>
+              <span class="skill-tag"><span>Data Structures</span><span class="proficiency-badge proficiency-badge--intermediate">Intermediate</span></span>
+              <span class="skill-tag"><span>DBMS</span><span class="proficiency-badge proficiency-badge--intermediate">Intermediate</span></span>
+              <span class="skill-tag"><span>Problem Solving</span><span class="proficiency-badge proficiency-badge--expert">Expert</span></span>
+              <span class="skill-tag"><span>Analytical Thinking</span><span class="proficiency-badge proficiency-badge--expert">Expert</span></span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== CONTACT SECTION ===== -->
+    <section id="contact" class="section" aria-label="Contact">
+      <div class="container container--narrow">
+        <h2 class="section-title">Get In Touch</h2>
+        <p class="section-subtitle">
+          Have a question or want to work together? Drop me a message.
+        </p>
+
+        <div id="form-feedback" class="form-feedback" role="alert" aria-live="assertive" hidden></div>
+
+        <form id="contact-form" class="contact-form" novalidate aria-label="Contact form">
+          <div class="form-group">
+            <label for="contact-name" class="form-label">Name <span aria-hidden="true">*</span></label>
+            <input
+              type="text"
+              id="contact-name"
+              name="name"
+              class="form-input"
+              placeholder="Your full name"
+              autocomplete="name"
+              aria-required="true"
+              aria-describedby="name-error"
+            />
+            <span id="name-error" class="field-error" role="alert" aria-live="polite"></span>
+          </div>
+
+          <div class="form-group">
+            <label for="contact-email" class="form-label">Email <span aria-hidden="true">*</span></label>
+            <input
+              type="email"
+              id="contact-email"
+              name="email"
+              class="form-input"
+              placeholder="you@example.com"
+              autocomplete="email"
+              aria-required="true"
+              aria-describedby="email-error"
+            />
+            <span id="email-error" class="field-error" role="alert" aria-live="polite"></span>
+          </div>
+
+          <div class="form-group">
+            <label for="contact-message" class="form-label">Message <span aria-hidden="true">*</span></label>
+            <textarea
+              id="contact-message"
+              name="message"
+              class="form-input form-textarea"
+              rows="5"
+              placeholder="Your message…"
+              aria-required="true"
+              aria-describedby="message-error"
+            ></textarea>
+            <span id="message-error" class="field-error" role="alert" aria-live="polite"></span>
+          </div>
+
+          <button type="submit" class="btn btn--primary btn--full" id="submit-btn">
+            Send Message
+          </button>
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container footer-inner">
+      <p class="footer-copy">&copy; 2024 Joshika S. All rights reserved.</p>
+      <a
+        href="https://github.com/JoshikaCB22"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="footer-github"
+        aria-label="Joshika S on GitHub (opens in a new tab)"
+      >
+        <!-- GitHub SVG icon -->
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="22" height="22" aria-hidden="true" focusable="false">
+          <path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577
+            0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7
+            3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236
+            1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605
+            -2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22
+            -.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23
+            .96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405
+            2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176
+            .765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92
+            .42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286
+            0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297
+            c0-6.627-5.373-12-12-12"/>
+        </svg>
+        GitHub
+      </a>
+    </div>
+  </footer>
+
+  <!-- ===== SCRIPTS ===== -->
+  <script src="js/projects.js"></script>
+  <script src="js/skills.js"></script>
+  <script src="js/contact.js"></script>
+  <script src="js/main.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admin Dashboard | Joshika S Portfolio</title>
+  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+</head>
+<body class="admin-page">
+
+  <!-- Top bar -->
+  <header class="admin-topbar" role="banner">
+    <span class="admin-topbar-title">Portfolio Admin</span>
+    <div style="display:flex; align-items:center; gap:1rem;">
+      <a href="../index.html" class="btn btn--outline btn--sm">← View Site</a>
+      <button id="logout-btn" class="btn btn--primary btn--sm" type="button">Logout</button>
+    </div>
+  </header>
+
+  <main class="admin-main" id="main-content">
+
+    <!-- ====== STATUS BANNER ====== -->
+    <div
+      id="dashboard-status"
+      class="form-feedback"
+      role="alert"
+      aria-live="assertive"
+      hidden
+    ></div>
+
+    <!-- ====== PROJECTS SECTION ====== -->
+    <section class="dashboard-section" aria-label="Projects management">
+      <h2 class="dashboard-section-title">Projects</h2>
+
+      <!-- Projects table -->
+      <div id="projects-table-wrapper" aria-live="polite">
+        <p class="loading-text">Loading projects…</p>
+      </div>
+
+      <!-- Add Project form -->
+      <div class="add-form" aria-label="Add new project">
+        <h3 class="add-form-title">Add New Project</h3>
+
+        <div id="project-form-status" class="form-feedback" role="alert" hidden></div>
+
+        <form id="add-project-form" novalidate>
+          <div class="add-form-row">
+            <div class="form-group">
+              <label for="proj-title" class="form-label">Title <span aria-hidden="true">*</span></label>
+              <input type="text" id="proj-title" name="title" class="form-input" required placeholder="Project title" />
+            </div>
+            <div class="form-group">
+              <label for="proj-tech" class="form-label">Tech Stack</label>
+              <input type="text" id="proj-tech" name="tech_stack" class="form-input" placeholder="React, Node.js, MongoDB" />
+              <small style="color:var(--color-text-muted); font-size:0.75rem;">Comma-separated</small>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="proj-desc" class="form-label">Description <span aria-hidden="true">*</span></label>
+            <textarea id="proj-desc" name="description" class="form-input form-textarea" rows="3" required placeholder="Short project description"></textarea>
+          </div>
+
+          <div class="add-form-row">
+            <div class="form-group">
+              <label for="proj-repo" class="form-label">Repo URL</label>
+              <input type="url" id="proj-repo" name="repo_url" class="form-input" placeholder="https://github.com/..." />
+            </div>
+            <div class="form-group">
+              <label for="proj-demo" class="form-label">Demo URL</label>
+              <input type="url" id="proj-demo" name="demo_url" class="form-input" placeholder="https://..." />
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="proj-image" class="form-label">Image URL</label>
+            <input type="url" id="proj-image" name="image_url" class="form-input" placeholder="https://..." />
+          </div>
+
+          <button type="submit" class="btn btn--primary" id="add-project-btn">Add Project</button>
+        </form>
+      </div>
+    </section>
+
+    <!-- ====== SKILLS SECTION ====== -->
+    <section class="dashboard-section" aria-label="Skills management">
+      <h2 class="dashboard-section-title">Skills</h2>
+
+      <!-- Skills table -->
+      <div id="skills-table-wrapper" aria-live="polite">
+        <p class="loading-text">Loading skills…</p>
+      </div>
+
+      <!-- Add Skill form -->
+      <div class="add-form" aria-label="Add new skill">
+        <h3 class="add-form-title">Add New Skill</h3>
+
+        <div id="skill-form-status" class="form-feedback" role="alert" hidden></div>
+
+        <form id="add-skill-form" novalidate>
+          <div class="add-form-row">
+            <div class="form-group">
+              <label for="skill-name" class="form-label">Skill Name <span aria-hidden="true">*</span></label>
+              <input type="text" id="skill-name" name="name" class="form-input" required placeholder="e.g. Java" />
+            </div>
+            <div class="form-group">
+              <label for="skill-category" class="form-label">Category <span aria-hidden="true">*</span></label>
+              <input type="text" id="skill-category" name="category" class="form-input" required placeholder="e.g. Backend" />
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="skill-proficiency" class="form-label">Proficiency <span aria-hidden="true">*</span></label>
+            <select id="skill-proficiency" name="proficiency" class="form-select form-input" required aria-required="true">
+              <option value="">Select proficiency…</option>
+              <option value="Beginner">Beginner</option>
+              <option value="Intermediate">Intermediate</option>
+              <option value="Expert">Expert</option>
+            </select>
+          </div>
+
+          <button type="submit" class="btn btn--primary" id="add-skill-btn">Add Skill</button>
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+  <script src="../js/admin-dashboard.js"></script>
+</body>
+</html>
